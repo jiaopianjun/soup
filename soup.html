@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>soup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="viewport" content="width=750,minimum-scale=0.2,maximum-scale=2,user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="icon.ico" />
+    <link rel="stylesheet" href="https://web.lieme.cn/common/css/base.css">
+    <link rel="stylesheet" href="css/soup.css">
+    <script src="https://web.lieme.cn/common/js/jquery-1.10.2.min.js" charset="utf-8"></script>
+    <script src="https://web.lieme.cn/common/js/api.js"></script>
+    <script src="https://web.lieme.cn/common/js/vue.js"></script>
+</head>
+<body>
+    <div class="index clearfix" >
+      <div class="header">
+         <img src="images/logo.png" alt="毒鸡汤" class="logo" />
+         <img src="images/wechat.png" alt="微信公众号" class="wechat" @click="showWechat">
+      </div>
+      <div class="cont">
+         <p class="text">{{text}}</p>
+         <a href="javascript:;" class="check bubbly-button" @click="check">
+            再来一碗
+         </a>
+      </div>
+      <div class="w" v-if="w">
+         <img src="images/w.jpeg" alt="小夭同学" />
+         <img src="images/close.png" alt="" class="close" @click="hiWechat"/>
+      </div>
+      
+      <span id="busuanzi_container_site_pv" class="pv">已有<span id="busuanzi_value_site_pv"></span>人喝了这碗毒鸡汤</span>
+    </div>
+<script src="js/soup.js" charset="utf-8"></script>
+<script>
+   var animateButton = function(e) {
+      e.preventDefault;
+      e.target.classList.remove('animate');
+      e.target.classList.add('animate');
+      setTimeout(function(){
+         e.target.classList.remove('animate');
+      },700);
+   };
+   var classname = document.getElementsByClassName("bubbly-button");
+   for (var i = 0; i < classname.length; i++) {
+      classname[i].addEventListener('click', animateButton, false);
+   }
+</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</body>
+</html>

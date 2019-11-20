@@ -1,0 +1,213 @@
+body {
+	background: #c84031;
+	height: 100%;
+    position: fixed;
+    width: 100%
+}
+.index{
+	position: relative;
+	height: 100%;
+	font-family: Alibaba Sans,SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.index .header{
+	position: relative;
+	height: 100px;
+}
+.header .logo {
+	position: absolute;
+	left: 5%;
+	width: 150px;
+}
+.header .wechat {
+	position: absolute;
+	right: 5%;
+	top: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+.index .cont{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%,-50%);
+}
+.cont .text{
+	color:#fff;
+	font-size: 35px;
+	font-family:"webfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+	transition: all .3s linear;
+	line-height: 1.5;
+	height: 80px;
+}
+.cont a {
+	position: relative;
+	display: inline-block;
+	border-radius: 40px;
+	padding: 20px 80px;
+	text-align: center;
+	background: #fff;
+	color:#c84031;
+	margin: 80px auto;
+	font-size: 16px;
+}
+.pv {
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	font-size: 16px;
+	bottom: 18px;
+	text-align: center;
+}
+.pv #busuanzi_value_site_pv {
+	font-weight: bold;
+	margin: 0 10px;
+}
+.index .w {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	
+	transition: all .8s linear;
+}
+.w img {
+	width: 100%;
+	border-radius: 50px;
+}
+.w .close {
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: -70px;
+	width: 50px;
+	height: 50px;
+	transition: all .5s linear;
+}
+.w .close:hover {
+	transform: rotate(180deg);
+	cursor: pointer;
+}
+.none {
+	display: none;
+}
+@media screen and (max-width: 1400px) {
+ 	.header .logo {
+		top: -40px;
+		width: 250px;
+	}
+	.header .wechat {
+		width: 70px;
+	}
+    .cont .text{
+		padding: 0 30px;
+	}
+	.cont a {
+		font-size: 35px;
+		padding: 40px 120px;
+	}
+	.pv,
+	#busuanzi_value_site_pv{
+		font-size: 20px;
+	}
+	.index .w {
+		width: 450px;
+	}
+}
+@font-face {
+	font-family: 'webfont';
+	font-display: swap;
+	src: url('//at.alicdn.com/t/webfont_9q9k8dxn95l.eot'); /* IE9*/
+	src: url('//at.alicdn.com/t/webfont_9q9k8dxn95l.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('//at.alicdn.com/t/webfont_9q9k8dxn95l.woff2') format('woff2'),
+	url('//at.alicdn.com/t/webfont_9q9k8dxn95l.woff') format('woff'), /* chrome、firefox */
+	url('//at.alicdn.com/t/webfont_9q9k8dxn95l.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('//at.alicdn.com/t/webfont_9q9k8dxn95l.svg#AlibabaPuHuiTiM') format('svg'); /* iOS 4.1- */
+}
+.bubbly-button {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	display: inline-block;
+	font-size: 1em;
+	padding: 1em 2em;
+	margin-top: 100px;
+	margin-bottom: 60px;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	color: #fff;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+	box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.bubbly-button:focus {
+	outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 140%;
+	height: 100%;
+	left: -20%;
+	z-index: -1000;
+	transition: all ease-in-out 0.5s;
+	background-repeat: no-repeat;
+}
+.bubbly-button:before {
+	display: none;
+	top: -75%;
+	background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #fff 20%, transparent 30%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+	background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+	display: none;
+	bottom: -75%;
+	background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+	background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+	transform: scale(0.9);
+	background-color: #fff;
+	box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+	display: block;
+	animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button.animate:after {
+	display: block;
+	animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+	0% {
+		background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+	}
+	50% {
+		background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+	}
+	100% {
+		background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+		background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+	}
+}
+@keyframes bottomBubbles {
+	0% {
+		background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+	}
+	50% {
+		background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+	}
+	100% {
+		background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+		background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+	}
+}
