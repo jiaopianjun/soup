@@ -1257,6 +1257,26 @@ var v = new Vue({
           }
         },
         error: function() {
+          _this.gethelist()
+        }
+      })
+    },
+    gethelist(){
+      let _this = this
+      $.ajax({
+        type: 'get',
+        url: 'https://web.lieme.cn/api/jt.php',
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        success:function(res) {
+          if (res.code === 200) {
+            _this.text = res.newslist[0].content
+            document.title = _this.text
+          } else {
+            _this.local()
+          }
+        },
+        error:function() {
           _this.local()
         }
       })
